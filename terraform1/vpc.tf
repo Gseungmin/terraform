@@ -209,7 +209,8 @@ resource "aws_eip" "korea_public_instance_eip" {
 
 resource "aws_key_pair" "korea_pk" {
   key_name   = "korea_deployer_key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = "${var.public_key}"
+  #public_key = file("~/.ssh/id_rsa.pub")
 }
 
 
